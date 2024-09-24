@@ -54,6 +54,11 @@ function startRGBGlow() {
         }
     }, 50);
 }
+function setVideoVolume(level) {
+    const bgVideo = document.getElementById('bg-video');
+    bgVideo.volume = level; 
+}
+setVideoVolume(0.15);
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-content').style.display = 'none'; 
 });
