@@ -58,7 +58,7 @@ function setVideoVolume(level) {
     const bgVideo = document.getElementById('bg-video');
     bgVideo.volume = level; 
 }
-setVideoVolume(0.15);
+setVideoVolume(0.1);
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-content').style.display = 'none'; 
 });
