@@ -18,7 +18,6 @@ document.getElementById('enter-screen').addEventListener('click', function() {
     bgVideo.play(); 
     startRGBGlow();
 });
-
 function startRGBGlow() {
     const textElements = [
         ...document.querySelectorAll('.tag'),
@@ -55,22 +54,11 @@ function startRGBGlow() {
         }
     }, 50);
 }
-
 function setVideoVolume(level) {
     const bgVideo = document.getElementById('bg-video');
     bgVideo.volume = level; 
 }
-setVideoVolume(0.15);
-
+setVideoVolume(0.1);
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-content').style.display = 'none'; 
-});
-const bgVideo = document.getElementById('bg-video');
-let lastTime = 0;
-window.addEventListener('pagehide', () => {
-    lastTime = bgVideo.currentTime;
-});
-window.addEventListener('pageshow', () => {
-    bgVideo.currentTime = lastTime;
-    bgVideo.play();
 });
