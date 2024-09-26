@@ -1,6 +1,7 @@
 const colors = [
-    '#ff0000',
-    '#000000' 
+    '#4600ff',
+    '#ffffff',
+    '#13ff00'
 ];
 function hexToRgb(hex) {
     hex = hex.replace(/^#/, '');
