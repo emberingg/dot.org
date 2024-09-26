@@ -66,8 +66,12 @@
   width: 125px;
   height: 125px;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  object-fit: cover; /* Ensures the image covers the circle */
+  max-width: 100%; /* Prevents overflow */
+  max-height: 100%; /* Prevents overflow */
 }
+
 .tags .tag {
   display: inline-block;
   margin: 5px;
