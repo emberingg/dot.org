@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>W I N T E R</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A S T R A L</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="enter-screen">
-    Click to Enter
-  </div>
-  <video id="bg-video" autoplay muted loop>
-    <source src="https://github.com/wintrss/wintrss.github.io/releases/download/mp4/Beetleguece.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div id="opacity-overlay"></div>
-  <div id="main-content">
+    <div id="particles-js"></div>
     <div class="container">
-      <img src="https://github.com/wintrss/wintrss.github.io/blob/main/banner.png?raw=true" alt="Banner" class="banner"> <!-- New image banner -->
-      <div class="pfp-container">
-        <img src="https://github.com/wintrss/wintrss.github.io/blob/main/JO.gif?raw=true" alt="Profile Picture" class="pfp">
-      </div>
-      <div class="tags">
-        <span class="tag">Jenna Ortega</span>
-        <span class="tag">♡ ♡ ♡ ♡ ♡ ♡</span>
-      </div>
-      <div class="links"> 
-        <a href="https://discord.com/users/684468338734530696" class="link" target="_blank">DISCORD</a>
-      </div>
+        <div class="profile">
+            <div class="avatar">
+                <img src="pfp.gif" alt="Your Avatar">
+            </div>
+            <h1>Astrid</h1>
+            <p class="languages">Languages: Learning C++, C#, Game Hacking.</p>
+            <p class="about-me">
+                About Me: I'm Astrid. I spend a lot of my free time playing games. I’m trying to learn game hacking in C++ and C# for Unity engine.
+                Favorite Color(s): Blue, Purple.
+                Favorite Actor: Jenna Ortega :3
+            </p>
+        </div>
+        <div class="video-player" id="videoPlayer">
+            <video id="video" width="800" controls autoplay>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="loadingScreen">
+            <div class="loading-text"></div>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

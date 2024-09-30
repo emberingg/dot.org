@@ -1,65 +1,65 @@
-const colors = [
-    '#4600ff',
-    '#ffffff',
-    '#13ff00'
-];
-function hexToRgb(hex) {
-    hex = hex.replace(/^#/, '');
-    let r = parseInt(hex.substring(0, 2), 16);
-    let g = parseInt(hex.substring(2, 4), 16);
-    let b = parseInt(hex.substring(4, 6), 16);
-    return [r, g, b];
+function autoScaleContent() {
+    const scaleRatio = Math.min(
+        window.innerWidth / document.body.offsetWidth,
+        window.innerHeight / document.body.offsetHeight
+    );
+    document.body.style.transform = `scale(${scaleRatio})`;
+    document.body.style.transformOrigin = 'top center';
+    if (window.pJSDom && window.pJSDom.length > 0) {
+        window.pJSDom[0].pJS.fn.particlesRefresh();
+    }
 }
-document.getElementById('enter-screen').addEventListener('click', function() {
-    document.getElementById('enter-screen').style.display = 'none';
-    document.getElementById('opacity-overlay').style.display = 'block';
-    document.getElementById('main-content').style.display = 'flex'; 
-    const bgVideo = document.getElementById('bg-video');
-    bgVideo.muted = false; 
-    bgVideo.play(); 
-    startRGBGlow();
-});
-function startRGBGlow() {
-    const textElements = [
-        ...document.querySelectorAll('.tag'),
-        ...document.querySelectorAll('.link')
-    ];
-    const glowingElements = [
-        document.querySelector('.container'),
-        document.querySelector('.pfp')
-    ];
 
-    const rgbColors = colors.map(hexToRgb);
-    let colorIndex = 0;
-    let step = 0;
 
-    setInterval(() => {
-        const [r1, g1, b1] = rgbColors[colorIndex];
-        const [r2, g2, b2] = rgbColors[(colorIndex + 1) % rgbColors.length];
-        const r = Math.round(r1 + (r2 - r1) * (step / 100));
-        const g = Math.round(g1 + (g2 - g1) * (step / 100));
-        const b = Math.round(b1 + (b2 - b1) * (step / 100));
-        const rgbColor = `rgb(${r}, ${g}, ${b})`;
-        textElements.forEach(el => {
-            el.style.color = rgbColor;
-            el.style.textShadow = `0 0 10px ${rgbColor}`;
-        });
-        glowingElements.forEach(el => {
-            el.style.boxShadow = `0 0 15px ${rgbColor}, 0 0 30px ${rgbColor}`;
-        });
-
-        step++;
-        if (step > 100) {
-            step = 0;
-            colorIndex = (colorIndex + 1) % rgbColors.length;
+function typeText(text, element) {
+    let index = 0;
+    const speed = 250; 
+    function type() {
+        if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
         }
-    }, 50);
+    }
+    type();
 }
-function setVideoVolume(level) {
-    const bgVideo = document.getElementById('bg-video');
-    bgVideo.volume = level; 
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.style.display = 'none'; 
+    initializeVideoPlayer(); 
 }
-setVideoVolume(0.1);
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('main-content').style.display = 'none'; 
-});
+function initializeVideoPlayer() {
+    const videos = [
+        "https://github.com/astriids/wintrss.github.io/releases/download/beetleguese/vid1.mp4",
+        "https://github.com/astriids/wintrss.github.io/releases/download/beetleguese/vid2.mp4",
+        "https://github.com/astriids/wintrss.github.io/releases/download/beetleguese/vid3.mp4",
+        "https://github.com/astriids/wintrss.github.io/releases/download/beetleguese/vid4.mp4",
+        "https://github.com/astriids/wintrss.github.io/releases/download/beetleguese/vid5.mp4"
+    ];
+    let currentVideoIndex = 0;
+    const videoElement = document.getElementById('video');
+    const volume = 0.5; 
+    videoElement.volume = volume;
+    function playNextVideo() {
+        currentVideoIndex++;
+        if (currentVideoIndex >= videos.length) {
+            currentVideoIndex = 0; 
+        }
+        videoElement.src = videos[currentVideoIndex];
+        videoElement.play();
+    }
+    videoElement.addEventListener('ended', playNextVideo);
+    videoElement.src = videos[currentVideoIndex];
+    videoElement.play();
+}
+window.onload = function() {
+    autoScaleContent();
+    typeText("[ CLICK TO ENTER ]", document.querySelector('.loading-text'));
+    document.getElementById('loadingScreen').addEventListener('click', hideLoadingScreen);
+};
+window.onresize = function() {
+    autoScaleContent();
+    if (window.pJSDom && window.pJSDom.length > 0) {
+        window.pJSDom[0].pJS.fn.particlesRefresh();
+    }
+};
