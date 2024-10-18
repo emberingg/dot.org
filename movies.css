@@ -4,6 +4,7 @@ body {
     background-color: #000;
     font-family: Arial, sans-serif;
     color: white;
+    user-select: none;
     overflow: hidden;
 }
 
