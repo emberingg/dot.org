@@ -1,0 +1,73 @@
+.band {
+    background-color: #222; /* Background color of the band container */
+    border-radius: 10px; /* Maintain rounded corners */
+    padding: 0; /* Remove padding to better fit the image */
+    width: 400px; /* Adjusted width for better layout */
+    margin: 10px; /* Space between containers */
+    display: flex;
+    flex-direction: column; /* Stack banner and name container vertically */
+    align-items: center; /* Center contents */
+    transition: transform 0.3s ease; /* Smooth scaling */
+    text-align: center; /* Center text */
+}
+
+.band:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.banner {
+    background-color: #444; /* Background color of the banner */
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+    width: 100%; /* Full width of the band container */
+    text-align: center; /* Center text in the banner */
+    overflow: hidden; /* Hide overflow to fit image */
+    position: relative; /* For absolute positioning */
+}
+
+.banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band-name-container {
+    background-color: #333; /* Optional background for the name container */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for the name container */
+    border-radius: 0 0 10px 10px; /* Rounded corners for the bottom */
+}
+
+.band-name-container h2 {
+    margin: 0; /* Remove margin */
+    font-size: 16px; /* Font size for the band name */
+    color: #fff; /* Band name text color */
+    text-align: center; /* Center the band name */
+}
+
+/* Specific styles for Band 1 */
+.band1 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+/* You can define similar styles for additional bands if needed */
+.band2 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band3 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}

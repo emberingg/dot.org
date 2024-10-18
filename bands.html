@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B A N D S </title>
+    <link rel="stylesheet" href="bands.css">
+    <link rel="stylesheet" href="bands-front.css"> <!-- Link to the new CSS file -->
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="menu-bar">
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-container" id="menu-container">
+            <ul id="menu-options">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bands.html">Favorite Bands</a></li>
+                <li><a href="movies.html">Favorite Movies</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bands-container">
+        <div class="band band-1" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://pbs.twimg.com/ext_tw_video_thumb/1783957076970029056/pu/img/L_hsdCc92ha84QOl.jpg:large" alt="Band 1 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Ice Nine Kills</h2>
+            </div>
+        </div>
+        <div class="band band-2" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6c74454d-043a-435f-af78-aa21a4777adb/d65yy9a-79dd9684-4d25-4e25-8261-359db6c3ad75.jpg/v1/fill/w_1366,h_500,q_75,strp/linkin_park_banner_by_lpik_d65yy9a-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTAwIiwicGF0aCI6IlwvZlwvNmM3NDQ1NGQtMDQzYS00MzVmLWFmNzgtYWEyMWE0Nzc3YWRiXC9kNjV5eTlhLTc5ZGQ5Njg0LTRkMjUtNGUyNS04MjYxLTM1OWRiNmMzYWQ3NS5qcGciLCJ3aWR0aCI6Ijw9MTM2NiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.NgmmKRcY_YrL089AwmBBYqnyhwNjwxFLVzdQrcvbjBU" alt="Band 2 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Linkin Park</h2>
+            </div>
+        </div>
+        <div class="band band-3" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://www.impericon.com/cdn/shop/collections/20220427_destroy_rebuild_until_god_shows__header.jpg?v=1715766713" alt="Band 3 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Destroy Rebuild Until God Shows</h2>
+            </div>
+        </div>
+        <div class="band band-3" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://eurostore.warnermusic.com/on/demandware.static/-/Sites-Warner_EU_Gold-Library/default/dw2f637403/images/shinedown/shinedown-bg-2.jpg" alt="Band 3 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Shinedown</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="bands.js"></script>
+</body>
+</html>

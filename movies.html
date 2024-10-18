@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M O V I E S  </title>
+    <link rel="stylesheet" href="bands.css">
+    <link rel="stylesheet" href="bands-front.css"> <!-- Link to the new CSS file -->
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="menu-bar">
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-container" id="menu-container">
+            <ul id="menu-options">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bands.html">Favorite Bands</a></li>
+                <li><a href="movies.html">Favorite Movies</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bands-container">
+        <div class="band band-1" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://www.the-berliner.com/wp-content/uploads/2022/01/Scream-TWATK-1.jpg" alt="Band 1 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Scream</h2>
+            </div>
+        </div>
+        <div class="band band-2" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://i.ebayimg.com/images/g/4rAAAOSwvPNj7-64/s-l1200.jpg" alt="Band 2 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Terrifier</h2>
+            </div>
+        </div>
+        <div class="band band-3" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://thevisionmsms.org/wp-content/uploads/2017/09/It.jpg" alt="Band 3 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>IT</h2>
+            </div>
+        </div>
+        <div class="band band-3" onmouseover="hoverEffect(this)" onmouseout="resetEffect(this)">
+            <div class="banner">
+                <img src="https://static1.squarespace.com/static/56a1633ac21b86f80ddeacb4/t/6449eada6540dd5b0b2e7dbd/1682565850218/evil+dead+banner.png?format=1500w" alt="Band 3 Banner" />
+            </div>
+            <div class="band-name-container">
+                <h2>Evil Dead Rise</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="bands.js"></script>
+</body>
+</html>
