@@ -71,3 +71,51 @@
     object-fit: cover; /* Cover the entire area of the banner */
     display: block; /* Prevent bottom whitespace */
 }
+
+.band4 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band5 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band6 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band7 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band8 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
+
+.band9 .banner img {
+    width: 100%; /* Image fills the width of the banner */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Maximum height for the image */
+    object-fit: cover; /* Cover the entire area of the banner */
+    display: block; /* Prevent bottom whitespace */
+}
