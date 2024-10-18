@@ -9,6 +9,7 @@
     align-items: center; /* Center contents */
     transition: transform 0.3s ease; /* Smooth scaling */
     text-align: center; /* Center text */
+    user-select: none;
 }
 
 .band:hover {
