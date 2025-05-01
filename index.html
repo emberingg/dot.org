@@ -17,7 +17,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, 64px);
+      grid-template-columns: repeat(3, 64px);
       gap: 20px;
       margin-bottom: 30px;
     }
@@ -69,54 +69,26 @@
   </style>
 </head>
 <body>
-  <div class="grid" id="componentGrid">
-    <!-- Icons will be inserted here -->
-  </div>
+  <div class="grid" id="componentGrid"></div>
 
   <button onclick="resetGrid()">Reset</button>
 
   <script>
     const components = [
-      {
-        name: "B. F. Sword",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/8/8e/B._F._Sword_item_HD.png"
-      },
-      {
-        name: "Recurve Bow",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/4/4e/Recurve_Bow_item_HD.png"
-      },
-      {
-        name: "Needlessly Large Rod",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/2/2b/Needlessly_Large_Rod_item_HD.png"
-      },
-      {
-        name: "Tear of the Goddess",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/8/8e/Tear_of_the_Goddess_item_HD.png"
-      },
-      {
-        name: "Chain Vest",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/3/3b/Chain_Vest_item_HD.png"
-      },
-      {
-        name: "Negatron Cloak",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/2/2d/Negatron_Cloak_item_HD.png"
-      },
-      {
-        name: "Giant's Belt",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/1/1a/Giant%27s_Belt_item_HD.png"
-      },
-      {
-        name: "Sparring Gloves",
-        url: "https://static.wikia.nocookie.net/leagueoflegends/images/5/5e/Sparring_Gloves_item_HD.png"
-      }
+      "https://static.wikia.nocookie.net/leagueoflegends/images/8/8a/B._F._Sword_TFT_item.png/revision/latest?cb=20210904175030",
+      "https://static.wikia.nocookie.net/leagueoflegends/images/c/c5/Recurve_Bow_TFT_item.png/revision/latest?cb=20210904175113",
+      "https://static.wikia.nocookie.net/leagueoflegends/images/0/06/Chain_Vest_TFT_item.png/revision/latest?cb=20210904175347",
+      "https://static.wikia.nocookie.net/leagueoflegends/images/6/68/Giant%27s_Belt_item.png/revision/latest?cb=20210904175536",
+      "https://static.wikia.nocookie.net/leagueoflegends/images/8/83/Needlessly_Large_Rod_TFT_item.png/revision/latest?cb=20210904175214",
+      "https://static.wikia.nocookie.net/leagueoflegends/images/d/d7/Tear_of_the_Goddess_TFT_item.png/revision/latest?cb=20210904175300"
     ];
 
     const grid = document.getElementById("componentGrid");
 
-    components.forEach(component => {
+    components.forEach(url => {
       const div = document.createElement("div");
       div.className = "icon";
-      div.innerHTML = `<img src="${component.url}" alt="${component.name}">`;
+      div.innerHTML = `<img src="${url}" alt="TFT Component">`;
       div.addEventListener("click", () => {
         div.classList.toggle("selected");
       });
