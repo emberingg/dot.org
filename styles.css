@@ -1,88 +1,130 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    font-family: Arial, sans-serif;
-    color: white;
-    overflow: hidden;
-    user-select: none;
+  margin: 0;
+  font-family: "gg sans", sans-serif;
+  background-color: #000;
+  color: white;
 }
 
-.menu-bar {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.burger-menu {
-    width: 30px;
-    cursor: pointer;
+.profile-card {
+  background: linear-gradient(to bottom, #0f001900, #22003602);
+  border-radius: 12px;
+  width: 720px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
 }
 
-.burger-menu .bar {
-    width: 60%;
-    height: 2px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.4s;
+.banner {
+  height: 160px;
+  background: url('https://i.pinimg.com/736x/5e/11/c8/5e11c8d201c9e9ee70aa8d73b42db04d.jpg') center/cover;
 }
 
-.menu-container {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-top: 10px;
+.avatar-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: -40px;
+  padding-left: 24px;
 }
 
-.menu-container.open {
-    max-height: 150px; /* Adjust based on content */
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 6px solid #00000000;
 }
 
-#menu-options {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+.status-bubble {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 8px 14px;
+  border-radius: 18px;
+  margin-left: 20px;
+  color: #ccc;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 520px;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.05);
 }
 
-#menu-options li {
-    margin: 5px 0;
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-#menu-options li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+.edit-button {
+  position: absolute;
+  right: 20px;
+  top: 130px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #2f2f2f;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
 }
 
-.profile-container {
-    background-color: #222;
-    border-radius: 15px;
-    padding: 50px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    margin: 100px auto;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+.section {
+  padding: 25px;
 }
 
-.profile-picture {
-    position: relative;
-    margin: -40px auto 10px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #c386ff;
-    background-color: #fff;
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 12px;
 }
 
-.profile-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the profile picture covers the entire circular container */
+.tags {
+  margin-top: 6px;
+  color: #9b9b9b;
+  font-size: 13px;
+}
+
+.tab-bar {
+  display: flex;
+  margin-top: 18px;
+  border-bottom: 1px solid #333;
+}
+
+.tab {
+  padding: 10px 14px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.tab.active {
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+}
+
+.about-me {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+
+.label {
+  font-weight: bold;
+  color: #888;
+  margin-top: 22px;
+}
+
+.value {
+  margin-top: 5px;
+  color: #bbb;
 }
